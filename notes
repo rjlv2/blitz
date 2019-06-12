@@ -1,0 +1,11 @@
+cat words3.txt | sed "/.*A.*/d" | sed "/.*B.*/d" | sed "/.*C.*/d" | sed "/.*D.*/d" | sed "/.*E.*/d" | sed "/.*F.*/d" | sed "/.*G.*/d" | sed "/.*H.*/d" | sed "/.*I.*/d" | sed "/.*J.*/d" | sed "/.*K.*/d" | sed "/.*L.*/d" | sed "/.*M.*/d" | sed "/.*N.*/d" | sed "/.*O.*/d" | sed "/.*P.*/d" | sed "/.*Q.*/d" | sed "/.*R.*/d" | sed "/.*S.*/d" | sed "/.*T.*/d" | sed "/.*U.*/d" | sed "/.*V.*/d" | sed "/.*W.*/d" | sed "/.*X.*/d" | sed "/.*Y.*/d" | sed "/.*Z.*/d" > words4.txt
+
+
+
+gawk '{print tolower($0)}' words.txt > a.txt
+cat a.txt | sed "/.*-.*/d" > b.txt
+cat b.txt | gawk '!/.*\047.*/' > c.txt
+cat c.txt | sort > d.txt
+gawk 'length($0) > 1' d.txt > e.txt
+gawk 'length($0) < 17' e.txt > f.txt
+cat f.txt | sed '/.*\..*/d' > g.txt
