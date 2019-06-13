@@ -124,8 +124,10 @@ void traverse(lchar current)
 	for(int cIdx = cStart; cIdx <= cEnd; cIdx++){
 		if(!strcmp(current.str, database[cIdx])) {
 			int rIdx = 0;
-			while(current.idx_record[rIdx] != 0){
-				printf("%d-", current.idx_record[rIdx++]);
+			while(1){
+				printf("%d", current.idx_record[rIdx++]);
+				if(current.idx_record[rIdx] != 0) printf("-");
+				else break;
 			}
 			printf("\n");
 			//printf("%s\t", current.str);
